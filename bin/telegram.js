@@ -1,5 +1,5 @@
 const Telegraf = require('telegraf');
-const mainHost = 'https://sikadu.herokuapp.com/';
+const mainHost = 'https://sikadu.awx.app/';
 const bot = new Telegraf(process.env.TOKEN || '977774002:AAHRSqKRqrFZmqe1pcFPiJYOVp2o7FbOf2A');
 const Extra = require('telegraf/extra')
 const Markup = require('telegraf/markup')

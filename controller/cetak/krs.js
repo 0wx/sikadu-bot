@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 
 async function getPdf(nim, sesion, cb) {
 
-    const tmp = './tmp/krs-' + nim + '-' + Math.floor(new Date() / 1000) + '.pdf';
+    const tmp = __dirname + '/tmp/krs-' + nim + '-' + Math.floor(new Date() / 1000) + '.pdf';
     try {
         console.log(tmp)
         const browser = await puppeteer.launch();
