@@ -8,6 +8,17 @@ const token = process.env.TOKEN || '977774002:AAHRSqKRqrFZmqe1pcFPiJYOVp2o7FbOf2
 const telegram = require('telegraf');
 const bot = new telegram(token)
 
+
+// encode and decode link
+function encode(x){
+    return Buffer(x, 'utf8').toString('hex');
+  };
+  
+  function decode(x){
+    return Buffer(x, 'hex').toString('utf8');
+  };
+
+
 /* GET users listing. */
 router.get('/', function (req, res, next) {
     res.send('respond with a resource');
@@ -20,7 +31,9 @@ router.post('/login', function (req, res, next) {
     const username = req.body.username;
     let headArr = req.headers.referer.split('/');
     var id = headArr.indexOf('gagal') == -1 ? headArr[headArr.length - 1] : headArr[headArr.length - 2];
-    login(username, req.body.password, id, username, hasil => {
+
+    // cek login di sikadu
+    login(username, req.body.password, decode(id), username, hasil => {
        
         if (hasil.status) {
             var postData = new post(hasil.isi);

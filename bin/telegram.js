@@ -9,11 +9,20 @@ const cetak_krs = require('../controller/cetak/krs');
 const cetak_transkrip = require('../controller/cetak/transkrip');
 const fs = require('fs');
 
+function encode(x){
+  return Buffer(x, 'utf8').toString('hex');
+};
+
+function decode(x){
+  return Buffer(x, 'hex').toString('utf8');
+};
+
+//membuat link berdasarkan user id
 function menuStart(user) {
   const menu = Telegraf.Extra
     .markdown()
     .markup((m) => m.inlineKeyboard([
-      Markup.urlButton('🏫 Masuk ke Sikadu', mainHost + user)
+      Markup.urlButton('🏫 Masuk ke Sikadu', mainHost + encode(user))
     ]));
   return menu;
 }
@@ -21,9 +30,15 @@ function menuStart(user) {
 
 bot.start(async ctx => {
   var id = ctx.from.id;
+
+  //cek on database
   cekdb(id, status => {
+
+    // checking status : result (true) || false
     if (status) {
       console.log(status)
+
+      // mengirim pesan ke user jika sudah terdaftar di bot
       ctx.telegram.sendMessage(status.id, `😊 Hai ${status.nama},\nAnda sudah terdaftar`, {
         parse_mode: "Markdown",
         reply_markup: JSON.stringify({
@@ -35,7 +50,11 @@ bot.start(async ctx => {
         disable_notification: false
       });
     }
+
+    
     else {
+
+      //mengirim pesan ke user bahwa belum terdaftar
       ctx.reply(`Halo ${ctx.from.first_name},\nSepertinya kamu belum terdaftar`, menuStart(ctx.from.id))
     }
   });

@@ -11,9 +11,24 @@ var usersRouter = require('./routes/users');
 var app = express();
 
 const cekdb = require('./controller/cek/cekdb')
+
+
+
+//encode and decode
+
+function encode(x){
+  return Buffer(x, 'utf8').toString('hex');
+};
+
+function decode(x){
+  return Buffer(x, 'hex').toString('utf8');
+};
+
+
 //parse requests
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(mobileBrowser());
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -28,8 +43,8 @@ app.get('/', (req, res) => {
   res.redirect(301, 'http://sikadu.unwahas.ac.id')
 });
 app.get('/:data', function (req, res) {
-  console.log(req.params)
-  cekdb(req.params.data, hasil => {
+  //console.log(req.params)
+  cekdb(decode(req.params.data), hasil => {
     if (hasil) {
       res.send('Anda sudah login')
     }
