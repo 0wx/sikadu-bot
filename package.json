@@ -1,6 +1,6 @@
 {
-  "name": "expressmusic",
-  "version": "0.0.0",
+  "name": "sikadubot",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
@@ -26,5 +26,29 @@
     "request-promise": "^4.2.5",
     "tabletojson": "^2.0.3",
     "telegraf": "^3.36.0"
-  }
+  },
+  "description": "Telegram bot untuk membantu siswa mencetak KRS, TRANSKRIP, dll. lebih mudah",
+  "main": "./bin/www",
+  "bin": {
+    "sikadubot": "www"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0wx/sikadu-bot.git"
+  },
+  "keywords": [
+    "telegram",
+    "sikadu",
+    "mongoose",
+    "unwahas",
+    "bot",
+    "nodejs"
+  ],
+  "author": "awx",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/0wx/sikadu-bot/issues"
+  },
+  "homepage": "https://github.com/0wx/sikadu-bot#readme"
 }
