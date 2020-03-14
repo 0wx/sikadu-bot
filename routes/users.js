@@ -38,11 +38,11 @@ router.post('/login', function (req, res, next) {
                     parse_mode: "Markdown",
                     reply_markup: JSON.stringify({
                       keyboard: [
-                        ["📄 Cetak KRS", "📃 Cetak SKS"]
+                        ["📄 Cetak KRS", "📃 Cetak Transkrip"]
                       ],
                       resize_keyboard: true
                     }),
-                    disable_notification: false
+                    disable_notification: true
                   })
                 res.render('users' + m, {title: "Sukses!", username: hasil.isi.nama });
             })
