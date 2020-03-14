@@ -21,7 +21,7 @@
     "newman": "^4.6.0",
     "nodemon": "^2.0.2",
     "phantom-html-to-pdf": "^0.6.0",
-    "pug": "2.0.0-beta11",
+    "pug": "^2.0.4",
     "puppeteer": "^2.1.1",
     "request": "^2.88.2",
     "request-promise": "^4.2.5",

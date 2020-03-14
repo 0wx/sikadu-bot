@@ -1,11 +1,20 @@
 const puppeteer = require('puppeteer');
-
+const fs = require('fs');
 async function getPdf(nim, sesion, cb) {
 
     const tmp = __dirname + '/tmp/krs-' + nim + '-' + Math.floor(new Date() / 1000) + '.pdf';
+    if(!fs.existsSync( __dirname + '/tmp')){
+        fs.mkdirSync( __dirname + '/tmp');
+    }
+    else {}
     try {
         console.log(tmp)
-        const browser = await puppeteer.launch();
+        const browser = await puppeteer.launch({
+            'args' : [
+              '--no-sandbox',
+              '--disable-setuid-sandbox'
+            ]
+          });
         const page = await browser.newPage();
         await page.setRequestInterception(true);
         page.on('request', request => {
