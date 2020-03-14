@@ -1,18 +1,29 @@
-#!/usr/bin/env node
 
 /**
  * Module dependencies.
  */
-
+const fs = require('fs');
+const post = require('../models/post');
+const mg = require('mongoose');
 var app = require('../app');
 var debug = require('debug')('expressmusic:server');
 var http = require('http');
+var bot = require('./telegram');
 
+bot.launch();
 /**
  * Get port from environment and store in Express.
  */
+mg.connect('mongodb+srv://yuwi:veryhighsecurerootpassword@yuwi-uased.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
+.then(() => {
+    console.log('connected yay!');
+})
+.catch(err => {
+    console.log('err! ' + err.message)
+});
 
-var port = normalizePort(process.env.PORT || '8080');
+
+var port = normalizePort(process.env.PORT || '80');
 app.set('port', port);
 
 /**
@@ -89,3 +100,10 @@ function onListening() {
   debug('Listening on ' + bind);
   console.log(bind);
 }
+
+
+// cek tmp file exist or not 
+if(!fs.existsSync('./tmp')){
+  fs.mkdirSync('./tmp')
+};
+

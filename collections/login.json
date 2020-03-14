@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "34bd8a21-4abf-4ce9-89b1-c9250c84664c",
+		"name": "loginSikadu",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://sikadu.unwahas.ac.id/sia/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Host",
+						"value": " sikadu.unwahas.ac.id",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": " Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:73.0) Gecko/20100101 Firefox/73.0",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": " text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Language",
+						"value": " id,en-US;q=0.7,en;q=0.3",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": " gzip, deflate",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Content-Length",
+						"value": " 78",
+						"type": "text"
+					},
+					{
+						"key": "Origin",
+						"value": " http://sikadu.unwahas.ac.id",
+						"type": "text"
+					},
+					{
+						"key": "Connection",
+						"value": " keep-alive",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": " http://sikadu.unwahas.ac.id/sia/",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": " __tawkuuid=e::sikadu.unwahas.ac.id::aKXwWVBDzJlScpH02aPnCZmHxEL/JavY6ApQbuegJnsLkf7DV1yRJ/vpK6+i9CE0::2; TawkConnectionTime=0",
+						"type": "text"
+					},
+					{
+						"key": "Upgrade-Insecure-Requests",
+						"value": " 1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nim",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "passuser",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "an_sec",
+							"value": "992899",
+							"type": "text"
+						},
+						{
+							"key": "angka1",
+							"value": "992899",
+							"type": "text"
+						},
+						{
+							"key": "kirim",
+							"value": "L.O.G.I.N",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://sikadu.unwahas.ac.id/sia/",
+					"protocol": "http",
+					"host": [
+						"sikadu",
+						"unwahas",
+						"ac",
+						"id"
+					],
+					"path": [
+						"sia",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

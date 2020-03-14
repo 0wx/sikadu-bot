@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "0c3eef05-f603-414a-a0e7-07c0284efb72",
+		"name": "cetakkrs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://sikadu.unwahas.ac.id/sia/ctk_krs_mhs.php?kdmhs=",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Host",
+						"value": " sikadu.unwahas.ac.id",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": " Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:73.0) Gecko/20100101 Firefox/73.0",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": " text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Language",
+						"value": " id,en-US;q=0.7,en;q=0.3",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": " gzip, deflate",
+						"type": "text"
+					},
+					{
+						"key": "Connection",
+						"value": " keep-alive",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": " ",
+						"type": "text"
+					},
+					{
+						"key": "Upgrade-Insecure-Requests",
+						"value": " 1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://sikadu.unwahas.ac.id/sia/ctk_krs_mhs.php?kdmhs=",
+					"protocol": "http",
+					"host": [
+						"sikadu",
+						"unwahas",
+						"ac",
+						"id"
+					],
+					"path": [
+						"sia",
+						"ctk_krs_mhs.php"
+					],
+					"query": [
+						{
+							"key": "kdmhs",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -3,12 +3,12 @@ html
   head
     title= title
     link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css')
-    link(rel='stylesheet', href='../stylesheets/style.css')
+    link(rel='stylesheet', href='../stylesheets/style-m.css')
   body
         center 
-            img(src="https://www.easyuni.co.id/media/institution/photo/2015/07/24/logo_unwahas.jpg", alt="unwahas" , style="width: 10%")
-        
-        
+            img(src="https://www.easyuni.co.id/media/institution/photo/2015/07/24/logo_unwahas.jpg", alt="unwahas" , style="width: 30%")
+        br
+        br
         div.text-center
             form(class="form-signin" method="POST" action="/users/login")
                 #error
@@ -16,8 +16,8 @@ html
                         p.text-danger NIM atau Password salah
 
                 - var h1Classes = ['h3', 'mb-3', 'font-weight-normal']
-                h1(class=h1Classes) Masukan NIM dan Password
-                
+                h1(class=h1Classes style="font-size: 50px") Masukan NIM dan Password
+                br
                 br
                 label( for="inputEmail" class="sr-only") Email address
                 input(type="number" name="username" id="inputEmail" class="form-control" placeholder="NIM" required autofocus)
@@ -34,11 +34,11 @@ html
 
                 //-signIn button
                 - var buttonClass=['btn', 'btn-lg', 'btn-primary', 'btn-block'];
-                button(class=buttonClass type="submit" ) Masuk
+                button(class=buttonClass type="submit" style="font-size: 60px") Masuk
 
                 - var pClasses=['mt-5', 'mb-3', 'text-muted'];
-                p(class=pClasses) &copy; 2020
-                
+                p(class=pClasses style="font-size: 35px") &copy; 2020
+    
 
   script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js')
   script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js')
