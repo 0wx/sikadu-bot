@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer');
-
+const fs = require('fs');
 async function getPdf(nim, sesion, cb) {
 
     const tmp = __dirname + '/tmp/transkrip-' + nim + '-' + Math.floor(new Date() / 1000) + '.pdf';
