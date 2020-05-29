@@ -11,7 +11,7 @@ $ npm i
 Buat file ```.env``` berisi token bot mu dan db url (mongodb)
 ```
 TOKEN=bot_token
-DB_URL='mongodb+srv://user:veryhighsecurerootpassword@cluster.mongodb.net/test?retryWrites=true&w=majority'
+DB_URL=mongodb+srv://user:veryhighsecurerootpassword@cluster.mongodb.net/test?retryWrites=true&w=majority
 ```
 atau bisa tambahkan langsung melalui terminal
 
